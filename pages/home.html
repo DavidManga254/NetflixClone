@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="../images/PngItem_1041504.png">
+        <title>
+            Netflix Clone-Movies
+        </title>
+    </head>
+    <body id="boddy">
+        <div id="backvideo">
+            <video  muted id="thevideo" poster="../images/poster.jpg" loop>
+                <source src="../video/Luffy, Law and Kid's Transformation to Kill Kaido - One Piece 1017.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="restbody">
+            <header id="header">
+                <div id="leftheader">
+                    <img src="../images/logo.png" id="headerimage">
+                    <p class="nav">Home</p>
+                    <p class="nav">TV Shows</p>
+                    <p class="nav">Movies</p>
+                    <p class="nav">New & Popular</p>
+                    <p class="nav">My List</p>
+                    <p class="nav">Browse by Languages</p>
+                </div>
+                <div id="rightheader">
+                    <p><i onclick="rendersearch()" class="fa fa-search" id="clicker"></i></p>
+                    <div class="searcher" id="searcher" style="display: none;" onblur="tracker()">
+                        <i class="fa fa-search"></i><input class="searcher" onblur="tracker()" id="searchbar" type="text" placeholder="Search Movies,Tv Shows">
+                    </div>
+                    <p>Kids</p>
+                    <div id="imagedropdown">
+                        <img id="profileimage" src="../images/AAAABY20DrC9-11ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5NryzDK3_ez064IsBGdXjVUT59G5IRuFdqZlCJCneepU.png">
+                        <div id="imagecontent">
+                            <p>
+                                <img id="child" src="../images/chold.png"> Kids
+                            </p>
+                            <p>
+                                <i class="fa fa-pencil"></i> Manage Profile
+                            </p>
+                            <p>
+                                <i class='fa fa-user'></i> Profile
+                            </p>
+                            <p>
+                                <i class="fa fa-question-circle"></i> Help Center
+                            </p>
+                        </div>
+                    </div>
+                    <div id="notificationdropdown">
+                        <div id="thebell"><p ><i class="fa fa-bell" ></i></p></div>
+                        <div id="notificationcontent">
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/1899.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>1899</p>
+                                </div>
+                            </div>
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/bw.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>Blood & Water</p>
+                                </div>
+                            </div>
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/holyfamily.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>Holy Family</p>
+                                </div>
+                            </div>
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/swimmers.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>Swimmers</p>
+                                </div>
+                            </div>
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/troll.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>Troll</p>
+                                </div>
+                            </div>
+                            <div class="new">
+                                <div class="notImage">
+                                    <img src="../images/wednesday.jpg">
+                                </div>
+                                <div class="names">
+                                    <p>New Arrivall</p>
+                                    <p>Wednesday</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div id="genre">
+
+                </div>
+            </header>
+            
+            <div id="videodata">
+                <div id="imagedata">
+                    <img src="../images/onepiece.png" id="movielogo">
+                    <p id="moviedetails">One Piece follows the adventures of Monkey D. Luffy and his pirate crew in order to find the greatest treasure ever left by the legendary Pirate, Gold Roger</p>
+                </div>
+                <div id="below">
+                    <div id="player">
+                        <button id="play" class="moviebutton"><i class='fa fa-play' style="color: black;"></i> Play</button>
+                        <button id="moreinfo" class="moviebutton"><i class='fa fa-exclamation-circle' style="color:white;"></i>More Info</button>
+                    </div>
+                    <div id="tag">
+                        <div id="tager1">
+                            <button onclick="unmute()" id="unmute"><i class='fa fa-volume-up' style="color:white;"></i></button>
+                            <button style="display: none;" id="muter" onclick="mute()"><i class='fa fa-volume-off' style="color: white; ;"></i></button>
+                            <div id="tager">
+                                <p>16+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tag">
+
+                    </div>
+                </div>
+            </div>
+            <div id="moviebody">
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Action & Adventure</p>
+                    </div>
+                    <button id="leftarrow1" class="leftarrow" onclick="scrollleft('container1')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container1','leftarrow1')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container1">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/thetakedown.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/all dead.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/trolll.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/squid.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/big4.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/grayman.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/sex edu.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/eden.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/2.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/1.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Trending Now</p>
+                    </div>
+                    <button id="leftarrow2" class="leftarrow" onclick="scrollleft('container2')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container2','leftarrow2')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container2">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/3.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/5.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/6.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/7.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/8.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/51.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/9.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/10.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/11.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/12.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Blockbuster Movies</p>
+                    </div>
+                    <button id="leftarrow3" class="leftarrow" onclick="scrollleft('container3')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container3','leftarrow3')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container3">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/14.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/15.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/17.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/18.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/19.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/22.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/23.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/24.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/25.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/26.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Released In The Past Year</p>
+                    </div>
+                    <button id="leftarrow4" class="leftarrow" onclick="scrollleft('container4')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container4','leftarrow4')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container4">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/27.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/28.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/29.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/30.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/31.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/32.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/33.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/34.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/35.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/36.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Gritty Movies</p>
+                    </div>
+                    <button id="leftarrow5" class="leftarrow" onclick="scrollleft('container5')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container5','leftarrow5')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container5">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/37.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/38.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/40.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/42.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/43.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/45.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/46.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/48.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/49.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/50.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                <div class="movieholder">
+                    <div class="title">
+                        <p>Top Picks</p>
+                    </div>
+                    <button id="leftarrow6" class="leftarrow" onclick="scrollleft('container6')"><i class="fa fa-angle-double-left"></i></button>
+                    <button class="rightarrow" onclick="scrollright('container6','leftarrow6')"><i class="fa fa-angle-double-right"></i></button>
+                    <div class="movies" id="container6">
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/52.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/53.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/54.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/55.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/56.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/57.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/58.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/59.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/60.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="moviecontainer" >
+                                <div class="movieimage">
+                                    <img src="../images/61.jpg">
+                                </div>
+                                <div class="movienamesdetails">
+                                    <div class="usertags">
+                                        <div class="childtag">
+                                            <i class='fa fa-play' style="color: white;" ></i>
+                                            <i class="fa fa-plus" ></i>
+                                            <i class="fa fa-thumbs-up" ></i>
+                                        </div>
+                                        <div class="moreinfo">
+                                            <i class="fa fa-caret-down" style="color: white;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+
+                    </div>
+                </div>
+                
+        </div>
+        <Footer>
+            <div id="socialhandles">
+                <i class="fa fa-facebook-f"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube"></i>
+            </div>
+            <div id="userhelp">
+                <div class="section">
+                    <p>Audio Description</p>
+                    <p>Investor Relations</p>
+                    <p>Legal Notices</p>
+                </div>
+                <div class="section">
+                    <p>Help Centre</p>
+                    <p>Jobs</p>
+                    <p>Cookie Preferences</p>
+                </div>
+                <div class="section">
+                    <p>Gift Cards</p>
+                    <p>Terms Of Use</p>
+                    <p>Corporate Information</p>
+                </div>
+                <div class="section">
+                    <p>Media Centre</p>
+                    <p>Privacy</p>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+            <div id="service">
+                <p>Service Code</p>
+            </div>
+            <div id="copyright">
+                <p>&copy;1997-2022Netflix,Inc</p>
+            </div>
+        </Footer>
+        <script src="../javascript/home.js"></script>
+    </body>
+</html>
